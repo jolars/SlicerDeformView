@@ -89,14 +89,14 @@ DeformView accepts a deformation field (transform node) and a reference image (t
 
 ![Overview of DeformView 3D Slicer Module. Left: user interface for the proposed module Right: dense colour map (red is higher deformation) with cursor displaying point-wise deformation magnitude on hover in axial (top), coronal (middle), and sagittal (bottom) views \label{fig:UI_overview}](figures/UI_overview.png)
 
-### Displacement Magnitude Map
+## Displacement Magnitude Map
 The first new dense colour map renders the Euclidean magnitude of the displacement vector (the distance each voxel has moved between its original and deformed position), in millimeters. Our module converts the transform into a dense vector field sampled across the entire reference image grid, and the length of each displacement vector is stored as a scalar value at each voxel location and displayed using one of eight scientific colour maps, with options for colour-blind readability [@crameri2024].  An interactive voxel-wise cursor displays the numerical displacement magnitude at the pointer location in real time, as shown in \autoref{fig:four_plot}. This provides a dense spatial understanding of deformation quantity and position across the full 3D volume.
 
 
-### Jacobian Determinant Map
+## Jacobian Determinant Map
 This map renders the Jacobian determinant of the deformation field at every voxel as a percentage of local volumetric change, indicating whether a region has expanded or contracted under the deformation [@chung2001]. Tissue expansion (percentage > 0%) is rendered in red, tissue compression (percentage < 0%) in blue, and no change (percentage = 0%) in white, as shown in \autoref{fig:four_plot}. This allows researchers to identify changes to anatomical regions or areas of physiologically implausible deformation that may indicate registration errors.
 
-### Increment Transform
+## Increment Transform
 Rather than only displaying the final deformation, as existing modules do, the transformation is incrementally applied to the source image across 10 discrete steps (0.1x, 0.2x, … 1.0x of the full transform), allowing users to observe how the deformation accumulates spatially. This is particularly useful for training and for diagnosing registration behaviour at intermediate stages. It should be noted that, while displacement magnitudes at intermediate steps are exact, intermediate Jacobian values are a linear approximation of the full-transform values. 
 
 We visualize the difference between DeformView visualization compared to the existing 3D Slicer functionality in Transform module for both displaying displacement magnitude and local volume change (compression/ expansion) in \autoref{fig:four_plot}.
