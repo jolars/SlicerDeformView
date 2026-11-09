@@ -33,10 +33,13 @@ authors:
 affiliations:
  - name: McGill University, Canada
    index: 1
+   ror: "01pxwe438"
  - name: Montreal Neurological Institute, Canada
    index: 2
+   ror: "05ghs6f64"
  - name: Imperial College London, United Kingdom
    index: 3
+   ror: "041kmwe10"
 
 date: 4 July 2026
 bibliography: paper.bib
