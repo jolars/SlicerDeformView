@@ -119,7 +119,7 @@ DeformView includes an automated self-test built on Slicer's `ScriptedLoadableMo
 | Smooth curved (non-linear) | B-spline | Slicer evaluation | < 10^-13^ mm | 1.8 × 10^-4^ |
 | Smooth curved (non-linear) | Thin-plate spline | Slicer evaluation | < 10^-13^ mm | 1.1 × 10^-5^ |
 
-: Maximum absolute error against the reference. All tests use anisotropic voxel spacing. Jacobian errors are over interior voxels; curved-field values are at 0.5–0.75 mm spacing. \label{tab:validation}
+: Maximum absolute error against the reference. All tests use anisotropic voxel spacing. Jacobian errors are measured over interior voxels; curved-field values are at 0.5–0.75 mm spacing. \label{tab:validation}
 
 From \autoref{tab:validation}, DeformView reproduces every linear deformation field to floating-point precision. On non-linear deformation fields (sinusoidal grid, B-spline, TPS), the Jacobian determinant has a small discretization error because DeformView estimates derivatives by central differences between neighbouring voxels. At every interior voxel, the difference from the reference Jacobian determinant stayed within the theoretical central-difference bound and fell 3.7-4.0x when voxel spacing was halved, as expected for second-order (h^2^) accuracy. The largest error at 0.5-0.75 mm spacing was 1.6x10^-3^ on the sinusoidal grid, which was deliberately strongly curved (determinant ranges from 0.44 to 1.89; volume change -56% to +89%) across the field. On less strongly curved non-linear fields, much smaller errors occurred: 1.8x10^-4^ for the B-spline field and 1.1x10^-5^ for the TPS field. 
 
