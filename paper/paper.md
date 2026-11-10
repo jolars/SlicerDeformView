@@ -57,7 +57,7 @@ Non-linear image registration is a key task in medical imaging, where a spatiall
 
 Clinicians must interpret these resulting deformation fields, either to guide clinical decision-making or to validate that a registration algorithm is performing correctly. However, existing deformation software for non-linear image registration is largely sparse and qualitative, making it difficult to interpret and localize tissue deformation [@brock2017]. For example, it can be difficult to determine how far tissue moved near a structure of interest or where volume was lost or gained. Correct interpretation of deformed anatomy is especially difficult for inexperienced surgeons or researchers.
 
-The displacement magnitude and Jacobian determinant address these concerns bceause they quantify how many millimetres tissue has been displaced near the resection margin. 
+The displacement magnitude and Jacobian determinant address these concerns because they quantify how many millimetres tissue has been displaced near the resection margin. 
 
 For example, in image-guided neurosurgery (IGNS), patient-to-image registration is used to align preoperative scans with patient anatomy during surgery. ‘Brain shift’, or non-linear shifts in brain tissue, causes a mismatch between preoperative images and the patient’s current anatomy, necessitating the use of non-linear image registration to deform preoperative images into the intraoperative image space [@abhari2014]. Other use cases include longitudinal studies to monitor disease progression or interventional guidance to maximize therapeutic precision. As non-linear image registration is a general problem, these use cases extend across many anatomical systems and modalities.
 
@@ -126,7 +126,7 @@ From \autoref{tab:validation}, DeformView reproduces every linear deformation fi
 
 # AI usage disclosure
 
-Generative AI tools (Claude Sonnet 4.6) were used in the development of this software, specifically for debugging purposes. Authors have reviewed and validated all AI-assisted code output and made all core design decisions. AI was not used for writing this manuscript, or the preparation of supporting materials. 
+Generative AI tools (Claude Sonnet 4.6) were used in the development of this software, specifically for debugging purposes. The authors have reviewed and validated all AI-assisted code output and made all core design decisions. AI was not used to write this manuscript or prepare supporting materials. 
 
 # References
 
