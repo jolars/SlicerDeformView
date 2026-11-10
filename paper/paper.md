@@ -77,7 +77,7 @@ DeformView is implemented as a Python extension for 3D Slicer, an open-source pl
 
 A key design principle of DeformView is compatibility, both with Slicer's data model and with existing modules. All input selectors expose only the data types relevant to each function: for example, the transformation input only accepts transform types available in Slicer (linear, B-spline, grid, thin-plate spline, and composite) [@Slicer_Transforms]. As well, DeformView is designed to operate in conjunction with existing Slicer tools. For example, the DeformView colour maps can be displayed alongside the sparse overlays of the existing Transform module. As shown in \autoref{fig:glyph}, this combination of the displacement magnitude colour map and glyphs provides both a quantified, spatially localized interpretation and an intuitive representation of local direction change. DeformView includes an automated self-test (built on Slicer's `ScriptedLoadableModuleTest` framework) that verifies the DeformView module without the need for additional downloads or external files, see Validation or the repository README for instructions.
  
-![Integration of DeformView displacement magnitude and existing Transform glyph visualization.\label{fig:glyph}](figures/glyph_overlay.png)
+![Integration of DeformView's displacement magnitude map with the existing Transform glyph visualization.\label{fig:glyph}](figures/glyph_overlay.png)
 
 
 # Research Impact Statement
